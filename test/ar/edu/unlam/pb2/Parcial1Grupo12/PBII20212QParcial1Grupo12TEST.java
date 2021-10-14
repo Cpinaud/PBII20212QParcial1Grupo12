@@ -1,4 +1,4 @@
-package ar.edu.unlam.pb2;
+package ar.edu.unlam.pb2.Parcial1Grupo12;
 
 import static org.junit.Assert.*;
 
