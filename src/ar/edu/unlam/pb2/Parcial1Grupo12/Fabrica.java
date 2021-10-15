@@ -19,7 +19,7 @@ public class Fabrica {
 	}
 
 	public void crearVehiculo(Vehiculo vehiculo) {
-		this.vehiculos[indexVehiculos]=vehiculo;
+		this.vehiculos[indexVehiculos++]=vehiculo;
 		
 	}
 	
