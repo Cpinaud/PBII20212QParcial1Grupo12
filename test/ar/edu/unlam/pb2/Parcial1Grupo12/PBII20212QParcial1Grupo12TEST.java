@@ -7,8 +7,14 @@ import org.junit.Test;
 public class PBII20212QParcial1Grupo12TEST {
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void queSePuedaCrearUnaFabrica() {
+		
+		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		assertNotNull(fabrica);
+		
+		
+		
+		
 	}
 
 }
