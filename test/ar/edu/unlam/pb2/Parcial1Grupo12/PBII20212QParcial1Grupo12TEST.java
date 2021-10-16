@@ -28,10 +28,18 @@ public class PBII20212QParcial1Grupo12TEST {
 	}
 	
 	@Test
-	public void Cuandolafabricaabretengavehiculosfabricados() {
+	public void CuandoLaFabricaAbreTengaVehiculosFabricados() {
 		
 		Vehículo vehículo1 = new Vehículo ("modelo A", 4, 4, "Toyiva 1.6","azul marino", 5, "automatica", "airbag", "incluidos", "full", "activo", "DACOTA Muzin 1.6", 210, 150, 5 );
 		assertNotNull(vehículo1);	
+	}
+	
+	@Test
+	public void CuandoLaFabricaCreoUnAutoSeLeAsigneUnCodigoYSeAlmaceneEnLaListaDeVehículos() {
+		
+		Vehiculos[] vehiculo=new Vehiculos[10];
+		vehiculo[0]=new Vehiculos("modelo A", 4, 4, "Toyiva 1.6","azul marino", 5, "automatica", "airbag", "incluidos", "full", "activo", "DACOTA Muzin 1.6", 210, 150, 5 );
+		assertNotNull(vehiculo[0]);	
 	}
 	
 

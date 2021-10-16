@@ -3,12 +3,12 @@ package ar.edu.unlam.pb2.Parcial1Grupo12;
 public class Vehículo {
     //variables de vehículo
 	private String estructuraBase,motor, color, cajaCambios, sistSeguridad, accesorios, version, estadoDeFabricacion, descripcion;
-	private Integer ruedas, asientos, puertas, largo, ancho, capacidadDePersonas ;
-
+	private Integer ruedas, asientos, puertas, largo, ancho, capacidadDePersonas, id;
+	private static Integer idSiguiente=1;
+	
 	//constructor de vehículo
 	public Vehículo(String estructuraBase, Integer ruedas, Integer asientos, String motor, String color, Integer puertas , String cajaCambios, String sistSeguridad, String accesorios,
 			String version, String estadoDeFabricacion, String descripcion, Integer largo, Integer ancho, Integer capacidadDePersonas) {
-		
 		this.estructuraBase=estructuraBase;
 		this.ruedas=ruedas;
 		this.asientos=asientos;
@@ -24,7 +24,9 @@ public class Vehículo {
 		this.largo=largo;
 		this.ancho=ancho;
 		this.capacidadDePersonas=capacidadDePersonas;
+		this.id=idSiguiente;
 		
+		idSiguiente++;
 	}
 
 }
