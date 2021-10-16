@@ -1,11 +1,11 @@
 package ar.edu.unlam.pb2.Parcial1Grupo12;
 
-public interface Funcionalidad3 {
+public interface FuncionalidadDeVehiculo {
 	
 	
 	public abstract  Boolean autoEstacionado();
 	
-	public abstract  Puerta identificadorPuertaAbierta();
+	public abstract  Boolean identificadorPuertaAbierta();
 	
 	public abstract Boolean techoCorredizo();
 	

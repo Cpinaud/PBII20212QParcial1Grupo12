@@ -29,6 +29,46 @@ public class Fabrica {
 		return vehiculo;
 	}
 
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public Integer getCuit() {
+		return cuit;
+	}
+
+	public void setCuit(Integer cuit) {
+		this.cuit = cuit;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+
+	public Vehiculo[] getVehiculos() {
+		return vehiculos;
+	}
+
+	public void setVehiculos(Vehiculo[] vehiculos) {
+		this.vehiculos = vehiculos;
+	}
+
+	public Integer getIndexVehiculos() {
+		return indexVehiculos;
+	}
+
+	public void setIndexVehiculos(Integer indexVehiculos) {
+		this.indexVehiculos = indexVehiculos;
+	}
+
 	
 
 }

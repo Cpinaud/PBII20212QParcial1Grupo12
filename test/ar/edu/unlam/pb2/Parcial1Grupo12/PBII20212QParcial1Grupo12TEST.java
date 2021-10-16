@@ -10,17 +10,18 @@ public class PBII20212QParcial1Grupo12TEST {
 	public void queSePuedaCrearUnaFabrica() {
 		
 		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
-		assertNotNull(fabrica);
-		
-		
-
-		
+		assertNotNull(fabrica);	
 	}
 	
 	@Test
 	public void queSePuedaCrearUnVehiculoEnLaFabrica() {
 		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
-		Vehiculo vehiculoEsperado = new Vehiculo();
+		Accesorio accesorio1 = new Accesorio();
+		Caracteristicas caracteristica1= new Caracteristicas();
+		
+		Vehiculo vehiculo = new Auto(150.0, 4, accesorio1, true,4, caracteristica1);
+		
+		Vehiculo vehiculoEsperado =  vehiculo ;
 		fabrica.crearVehiculo(vehiculoEsperado);
 		Vehiculo vehiculoObtenido=fabrica.getVehiculo(0);
 		assertEquals(vehiculoObtenido,vehiculoEsperado);
