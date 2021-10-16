@@ -8,7 +8,8 @@ public abstract class Vehiculo {
 	private Integer capacidadDePersonas;
 	private Caracteristicas caracteristicas;
 
-	public Vehiculo( Integer asiento, Accesorio accesorio, Boolean estadoDeFabricacion, Integer capacidadDePersonas,
+
+	public Vehiculo(Integer asiento, Accesorio accesorio, Boolean estadoDeFabricacion, Integer capacidadDePersonas,
 			Caracteristicas caracteristicas) {
 		super();
 		this.asientos = asiento;
@@ -18,8 +19,16 @@ public abstract class Vehiculo {
 		this.caracteristicas = caracteristicas;
 	}
 
-
-	
+	public Vehiculo(Integer asientos, Accesorio accesorio, Boolean estadoDeFabricacion, Integer capacidadDePersonas,
+			Integer ruedas, String motor, String color, Integer puerta, Boolean cajaDeCambios,
+			Boolean sistemaDeSeguridad, String version, Double largo, Double ancho, String descripcionComercial) {
+		this.asientos = asientos;
+		this.accesorio = accesorio;
+		this.estadoDeFabricacion = estadoDeFabricacion;
+		this.capacidadDePersonas = capacidadDePersonas;
+		this.caracteristicas = new Caracteristicas(ruedas, motor, color, puerta, cajaDeCambios, sistemaDeSeguridad,
+				version, largo, ancho, descripcionComercial);
+	}
 
 	public Integer getAsientos() {
 		return asientos;
