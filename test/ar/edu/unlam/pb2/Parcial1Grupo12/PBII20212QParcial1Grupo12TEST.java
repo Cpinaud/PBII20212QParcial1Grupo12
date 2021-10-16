@@ -26,6 +26,13 @@ public class PBII20212QParcial1Grupo12TEST {
 		Vehiculo vehiculoObtenido=fabrica.getVehiculo(0);
 		assertEquals(vehiculoObtenido,vehiculoEsperado);
 	}
+	
+	@Test
+	public void Cuandolafabricaabretengavehiculosfabricados() {
+		
+		Vehículo vehículo1 = new Vehículo ("modelo A", 4, 4, "Toyiva 1.6","azul marino", 5, "automatica", "airbag", "incluidos", "full", "activo", "DACOTA Muzin 1.6", 210, 150, 5 );
+		assertNotNull(vehículo1);	
+	}
+	
 
 }
- //comentario de comunicacion y prueba
