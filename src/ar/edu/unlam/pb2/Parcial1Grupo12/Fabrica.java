@@ -19,6 +19,18 @@ public class Fabrica {
 		
 		
 	}
+	
+	public Boolean buscarVehiculoPorDescripcionComercial(String descripcion) {
+		Boolean  estado= false;
+		for (int i = 0; i < indexVehiculos; i++) {
+			if(vehiculos[i].getCaracteristicas().getDescripcionComercial().equals(descripcion)) {
+				estado=true;
+				
+			}
+		}
+		
+		return estado;
+	}
 
 	public void crearVehiculo(Vehiculo vehiculo) {
 		this.vehiculos[indexVehiculos++]=vehiculo;
