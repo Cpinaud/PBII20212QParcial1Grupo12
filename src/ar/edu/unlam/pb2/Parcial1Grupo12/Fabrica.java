@@ -18,8 +18,8 @@ public class Fabrica {
 		
 	}
 
-	public void crearVehiculo(Vehiculo vehiculo) {
-		this.vehiculos[indexVehiculos++]=vehiculo;
+	public void fabricarVehiculo(Vehiculo vehiculo) {
+		this.vehiculos[indexVehiculos]=vehiculo;
 		
 	}
 	
@@ -52,23 +52,44 @@ public class Fabrica {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
-
+/*
 	public Vehiculo[] getVehiculos() {
 		return vehiculos;
 	}
 
 	public void setVehiculos(Vehiculo[] vehiculos) {
 		this.vehiculos = vehiculos;
-	}
+	}*/
 
 	public Integer getIndexVehiculos() {
 		return indexVehiculos;
 	}
-
+/*
 	public void setIndexVehiculos(Integer indexVehiculos) {
 		this.indexVehiculos = indexVehiculos;
 	}
 
+	*/
+	public void colocarAsientos(Vehiculo vehiculo) {
+		vehiculo.setAsientosColocados(Boolean.TRUE);
+	}
 	
+	public void colocarMotor(Vehiculo vehiculo,String nMotor) {
+		vehiculo.setMotorColocado(Boolean.TRUE);
+		vehiculo.setNumeroMotor(nMotor);
+	}
+	public void pintar(Vehiculo vehiculo,String color) {
+		vehiculo.setPintado(Boolean.TRUE);
+		vehiculo.setColor(color);
+	}
+	
+	public void colocarCajaDeCambios(Vehiculo vehiculo) {
+		vehiculo.setCajaDeCambiosColocada(Boolean.TRUE);
+	}
+	
+	public void colocarCarroceria(Vehiculo vehiculo,String nChasis) {
+		vehiculo.setCarroceriaColocada(Boolean.TRUE);
+		vehiculo.setNumeroChasis(nChasis);
+	}
 
 }

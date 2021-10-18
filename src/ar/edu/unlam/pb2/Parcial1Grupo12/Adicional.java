@@ -1,21 +1,16 @@
 package ar.edu.unlam.pb2.Parcial1Grupo12;
 
-public class Accesorio {
+public class Adicional {
 	private String nombre;
 	private String descripcion;
 
-	public Accesorio(String nombre, String descripcion) {
+	public Adicional(String nombre, String descripcion) {
 
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 	}
 
-	public Accesorio() {
-
-		this.nombre = " Cecicero";
-		this.descripcion = "Cenicero Universal Para Auto - Porta Objetos , Base de Goma";
-	}
-
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -34,7 +29,7 @@ public class Accesorio {
 
 	@Override
 	public String toString() {
-		return "Accesorio [nombre=" + nombre + ", descripcion=" + descripcion + "]";
+		return "[Nombre= " + nombre + ", Descripcion= " + descripcion + "]";
 	}
 
 }
