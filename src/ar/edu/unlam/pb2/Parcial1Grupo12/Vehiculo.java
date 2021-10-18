@@ -2,6 +2,7 @@ package ar.edu.unlam.pb2.Parcial1Grupo12;
 
 public abstract class Vehiculo {
 
+
 	private Integer cantidadAsientos;
 	private Boolean asientosColocados;
 	private Boolean enFabricacion;
@@ -39,10 +40,9 @@ public abstract class Vehiculo {
 		this.adicionales = new Adicional[10];
 		this.fabricacionFinalizada = Boolean.FALSE;
 		/*this.capacidadDePersonas = capacidadDePersonas;*/
+
 	}
 
-
-	
 
 	public Integer getCantidadAsientos() {
 		return cantidadAsientos;

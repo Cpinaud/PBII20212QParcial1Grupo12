@@ -7,6 +7,7 @@ public class Fabrica {
 	private String direccion;
 	private Vehiculo[] vehiculos;
 	private Integer indexVehiculos;
+	private Motor []motor;
 
 	public Fabrica(String nombre, Integer cuit, String direccion) {
 		this.nombre=nombre;
@@ -14,8 +15,21 @@ public class Fabrica {
 		this.direccion=direccion;
 		this.vehiculos = new Vehiculo[100];
 		this.indexVehiculos=0;
+		this.motor = new Motor[10];
 		
 		
+	}
+	
+	public Boolean buscarVehiculoPorDescripcionComercial(String descripcion) {
+		Boolean  estado= false;
+		for (int i = 0; i < indexVehiculos; i++) {
+			if(vehiculos[i].getDescripcionComercial().equals(descripcion)) {
+				estado=true;
+				
+			}
+		}
+		
+		return estado;
 	}
 
 	public void fabricarVehiculo(Vehiculo vehiculo) {
@@ -69,6 +83,7 @@ public class Fabrica {
 		this.indexVehiculos = indexVehiculos;
 	}
 
+
 	*/
 	public void colocarAsientos(Vehiculo vehiculo) {
 		vehiculo.setAsientosColocados(Boolean.TRUE);
@@ -82,6 +97,19 @@ public class Fabrica {
 		vehiculo.setPintado(Boolean.TRUE);
 		vehiculo.setColor(color);
 	}
+
+
+	public Motor getMotor(Integer index) {
+		
+		return motor[index];
+	}
+
+	public static Motor crearMotor() {
+		
+		return null;
+	}
+
+
 	
 	public void colocarCajaDeCambios(Vehiculo vehiculo) {
 		vehiculo.setCajaDeCambiosColocada(Boolean.TRUE);

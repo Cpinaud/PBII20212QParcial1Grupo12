@@ -33,6 +33,7 @@ public class PBII20212QParcial1Grupo12TEST {
 		assertEquals(vehiculoObtenido,vehiculoEsperado);
 	}
 	
+
 	
 	@Test
 	public void queAlFabricarUnVehiculoEnLaFabricaEsteEnFabricacion() {
@@ -103,7 +104,7 @@ public class PBII20212QParcial1Grupo12TEST {
 	}
 	
 	@Test
-	public void queAlQuererActicarModoCruceroEnUnaCamionetaAMenosDe70InformeQueNoSePuede() {
+	public void queAlQuererActivarModoCruceroEnUnaCamionetaAMenosDe70InformeQueNoSePuede() {
 		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
 		Camioneta camioneta = new Camioneta(6, 4.43,8.87);
 		camioneta.acelerar(50);
@@ -114,8 +115,38 @@ public class PBII20212QParcial1Grupo12TEST {
 		
 	}
 	
-	
-	
-	
+
+     
+	 @Test
+     public void queSePuedaCrearMotorEnLaFabrica() {
+		 Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		 Motor motor = new Motor ();
+		 Motor motorObtenido=Fabrica.crearMotor(); 
+		 assertNull(motorObtenido);
+		 
+     }
+
+	@Test
+	public void queSePuedeBuscarUnVehiculoEnlaFabrica() {
+		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		
+		Adicional accesorio1 = new Adicional();
+		
+		
+		Vehiculo vehiculo = new Auto(150.0, 4, accesorio1, true,4);
+		
+		Auto auto= new Auto(200.0, 4, accesorio1, true, 4);
+			
+		
+		fabrica.fabricarVehiculo(vehiculo);
+		fabrica.fabricarVehiculo(auto);
+		
+		Boolean valorEsperado =  true ;
+		
+		Boolean valorObtenido= fabrica.buscarVehiculoPorDescripcionComercial("usado");
+		
+		assertEquals(valorEsperado, valorObtenido);
+	}
 
 }
+
