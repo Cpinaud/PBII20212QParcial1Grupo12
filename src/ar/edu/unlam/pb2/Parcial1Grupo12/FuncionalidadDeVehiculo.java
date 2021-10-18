@@ -6,10 +6,8 @@ public interface FuncionalidadDeVehiculo {
 	public abstract  Boolean autoEstacionado();
 	
 	public abstract  Boolean identificadorPuertaAbierta();
-	
-	public abstract Boolean techoCorredizo();
-	
-	public abstract Boolean aireAcosdicionado();
+		
+
 
 
 }

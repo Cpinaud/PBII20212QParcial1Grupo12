@@ -39,22 +39,14 @@ public class Auto extends Vehiculo implements FuncionalidadDeVehiculo, modoCruce
 
 	@Override
 	public Boolean identificadorPuertaAbierta() {
-		// TODO Auto-generated method stub
-		return null;
+		Boolean estado= false;
+			if(getEncendido()) {
+				estado= true;
+			}
+		
+		return estado;
 	}
-
-	@Override
-	public Boolean techoCorredizo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public Boolean aireAcosdicionado() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
+	
 	public Double getVolumenDelBaul() {
 		return volumenDelBaul;
 	}

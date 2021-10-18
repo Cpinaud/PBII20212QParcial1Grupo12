@@ -155,6 +155,49 @@ public class PBII20212QParcial1Grupo12TEST {
 		
 		
 	}
+	
+	
+	@Test
+	public void queLaPuertaDelAutoEsteAbierta() {
+		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		
+		Auto auto = new Auto(150.0, 4);
+		
+		fabrica.fabricarVehiculo(auto);
+		
+		Boolean valorEsperado = true;
+		
+		auto.prenderAuto();
+		
+		Boolean valorObtenido= auto.identificadorPuertaAbierta();
+		
+		
+		assertEquals(valorEsperado,valorObtenido);
+		
+	}
+	
+	@Test
+	public void queLaPuertaDelAutoEsteCerrada() {
+		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		
+		Auto auto = new Auto(150.0, 4);
+		
+		fabrica.fabricarVehiculo(auto);
+		
+		Boolean valorEsperado = true;
+		
+		auto.prenderAuto();
+		
+		Boolean valorObtenido= auto.identificadorPuertaAbierta();
+		
+		auto.apagarAuto();
+		
+		
+		assertEquals(valorEsperado,valorObtenido);
+		
+		
+		
+	}
 
 }
 
