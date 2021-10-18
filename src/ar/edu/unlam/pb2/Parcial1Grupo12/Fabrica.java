@@ -7,6 +7,7 @@ public class Fabrica {
 	private String direccion;
 	private Vehiculo[] vehiculos;
 	private Integer indexVehiculos;
+	private Motor []motor;
 
 	public Fabrica(String nombre, Integer cuit, String direccion) {
 		this.nombre=nombre;
@@ -14,6 +15,7 @@ public class Fabrica {
 		this.direccion=direccion;
 		this.vehiculos = new Vehiculo[100];
 		this.indexVehiculos=0;
+		this.motor = new Motor[10];
 		
 		
 	}
@@ -67,6 +69,17 @@ public class Fabrica {
 
 	public void setIndexVehiculos(Integer indexVehiculos) {
 		this.indexVehiculos = indexVehiculos;
+	}
+
+
+	public Motor getMotor(Integer index) {
+		
+		return motor[index];
+	}
+
+	public static Motor crearMotor() {
+		
+		return null;
 	}
 
 	

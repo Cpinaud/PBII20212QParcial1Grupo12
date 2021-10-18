@@ -26,5 +26,13 @@ public class PBII20212QParcial1Grupo12TEST {
 		Vehiculo vehiculoObtenido=fabrica.getVehiculo(0);
 		assertEquals(vehiculoObtenido,vehiculoEsperado);
 	}
-
+     
+	 @Test
+     public void queSePuedaCrearMotorEnLaFabrica() {
+		 Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		 Motor motor = new Motor ();
+		 Motor motorObtenido=Fabrica.crearMotor(); 
+		 assertNull(motorObtenido);
+		 
+     }
 }
