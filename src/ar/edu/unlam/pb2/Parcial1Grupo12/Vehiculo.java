@@ -17,6 +17,7 @@ public abstract class Vehiculo {
 	private Boolean cajaDeCambiosColocada;
 	private Boolean carroceriaColocada;
 	private String numeroChasis;
+	private String descripcionComercial;
 
 	public Vehiculo( Integer asientos, Adicional adicional) {
 		this.cantidadAsientos = asientos;
@@ -32,6 +33,7 @@ public abstract class Vehiculo {
 		this.cajaDeCambiosColocada=Boolean.FALSE;
 		this.carroceriaColocada=Boolean.FALSE;
 		this.numeroChasis="";
+		this.descripcionComercial="";
 		/*this.capacidadDePersonas = capacidadDePersonas;*/
 	}
 	public Vehiculo( Integer asientos) {
@@ -145,6 +147,13 @@ public abstract class Vehiculo {
 			this.setFabricacionFinalizada(Boolean.TRUE);
 		}
 		return this.fabricacionFinalizada;
+	}
+	public String getDescripcionComercial() {
+		return this.descripcionComercial;
+	}
+	
+	public void setDescripcionComercial(String descripcionComercial) {
+		this.descripcionComercial=descripcionComercial;
 	}
 
 }// fin class

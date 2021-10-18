@@ -130,20 +130,17 @@ public class PBII20212QParcial1Grupo12TEST {
 	public void queSePuedeBuscarUnVehiculoEnlaFabrica() {
 		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
 		
-		Adicional accesorio1 = new Adicional();
 		
-		
-		Vehiculo vehiculo = new Auto(150.0, 4, accesorio1, true,4);
-		
-		Auto auto= new Auto(200.0, 4, accesorio1, true, 4);
-			
+		Vehiculo vehiculo = new Auto(150.0, 4);			
 		
 		fabrica.fabricarVehiculo(vehiculo);
-		fabrica.fabricarVehiculo(auto);
 		
-		Boolean valorEsperado =  true ;
 		
-		Boolean valorObtenido= fabrica.buscarVehiculoPorDescripcionComercial("usado");
+		
+		
+		Vehiculo valorEsperado =  vehiculo;
+		
+		Vehiculo valorObtenido= fabrica.buscarVehiculoPorDescripcionComercial("coupe,dos puertas con aire acondicionado");
 		
 		assertEquals(valorEsperado, valorObtenido);
 	}

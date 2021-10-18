@@ -20,16 +20,16 @@ public class Fabrica {
 		
 	}
 	
-	public Boolean buscarVehiculoPorDescripcionComercial(String descripcion) {
-		Boolean  estado= false;
+	public Vehiculo buscarVehiculoPorDescripcionComercial(String descripcion) {
+		Integer index=0;
 		for (int i = 0; i < indexVehiculos; i++) {
-			if(vehiculos[i].getDescripcionComercial().equals(descripcion)) {
-				estado=true;
+			if(this.vehiculos[i].getDescripcionComercial().equals(descripcion)) {
+				index = i;
 				
 			}
-		}
+		}Vehiculo vehiculo=this.vehiculos[index];
 		
-		return estado;
+		return vehiculo;
 	}
 
 	public void fabricarVehiculo(Vehiculo vehiculo) {
