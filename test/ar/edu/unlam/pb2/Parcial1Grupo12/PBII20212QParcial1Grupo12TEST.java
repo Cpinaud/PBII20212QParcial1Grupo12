@@ -144,6 +144,17 @@ public class PBII20212QParcial1Grupo12TEST {
 		
 		assertEquals(valorEsperado, valorObtenido);
 	}
+	
+	@Test
+	public void queAlQuererActivarModoCruceroEnUnAutoLoPermita() {
+		Fabrica fabrica = new Fabrica ("Fiat",302234522,"Av. Rivadavia 17654");
+		Auto auto = new Auto(150.0, 4);
+		String valorEsperado = auto.ActivarModoCrucero();
+		assertEquals("Modo crucero activado",valorEsperado);
+		
+		
+		
+	}
 
 }
 
