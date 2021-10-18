@@ -11,13 +11,9 @@ public class Motor {
 		return Motor;
 	}
 
-
 	public void setMotor(Integer motor) {
 		this.Motor = motor;
 	}
-
-
-
 
 
 }
