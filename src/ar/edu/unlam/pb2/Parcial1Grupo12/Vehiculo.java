@@ -82,6 +82,7 @@ public abstract class Vehiculo {
 	
 	public void agregarAdicional(Adicional adicional) {
 		this.adicionales[indexAdicional]=adicional;
+		this.indexAdicional++;
 	}
 
 	

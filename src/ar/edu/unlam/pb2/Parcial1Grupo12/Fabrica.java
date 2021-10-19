@@ -34,6 +34,7 @@ public class Fabrica {
 
 	public void fabricarVehiculo(Vehiculo vehiculo) {
 		this.vehiculos[indexVehiculos]=vehiculo;
+		this.indexVehiculos++;
 		
 	}
 	
