@@ -4,17 +4,23 @@ public class Auto extends Vehiculo implements FuncionalidadDeVehiculo, modoCruce
 
 	private Double volumenDelBaul;
 	private Boolean encendido;
+	private Integer distancia ;
+	private Boolean estadoSensorEstacionamiento;
 
 	public Auto(Double volumen, Integer cantidadAsientos) {
 		super(cantidadAsientos);
 		this.volumenDelBaul = volumen;
 		this.encendido = Boolean.FALSE;
+		this.distancia = 45;
+		this.estadoSensorEstacionamiento=Boolean.FALSE;
 	}
 	
 	public Auto(Double volumen, Integer cantidadAsientos, Adicional adicional) {
 		super(cantidadAsientos, adicional);
 		this.volumenDelBaul = volumen;
 		this.encendido = Boolean.FALSE;
+		this.distancia = 45;
+		this.estadoSensorEstacionamiento=Boolean.FALSE;
 	}
 
 	public Boolean prenderAuto() {
@@ -28,13 +34,13 @@ public class Auto extends Vehiculo implements FuncionalidadDeVehiculo, modoCruce
 	}
 
 	@Override
-	public Boolean autoEstacionado() {
-			Boolean estacionado= false;
-			if (getEncendido()== false) {
-				estacionado= true;
+	public void ActivarSensorEstacionamiento() {
+			
+			if (this.distancia <10) {
+				this.estadoSensorEstacionamiento=Boolean.TRUE;
 			}
 			
-		return estacionado;
+	
 	}
 
 	@Override
@@ -67,5 +73,19 @@ public class Auto extends Vehiculo implements FuncionalidadDeVehiculo, modoCruce
 	public String ActivarModoCrucero() {
 		return "Modo crucero activado";
 	}
+
+	public void estacionar() {
+		if(this.distancia>10) {
+			this.distancia-=10;
+			
+		}else {
+			this.ActivarSensorEstacionamiento();
+		}
+		
+	}
+	public Boolean getEstadoSensorEstacionamiento() {
+		return this.estadoSensorEstacionamiento;
+	}
+	
 
 }// fin class

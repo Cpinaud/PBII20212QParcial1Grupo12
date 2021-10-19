@@ -198,6 +198,28 @@ public class PBII20212QParcial1Grupo12TEST {
 		
 		
 	}
+	
+	@Test
+	public void queCuandoLaDistanciaSeaMenorA10SeActiveElSensorDeEstacionamiento() {
+		Auto auto = new Auto(150.0, 4);
+		
+		for(int i=0;i<5;i++) {
+			auto.estacionar();
+		}
+		
+		assertTrue(auto.getEstadoSensorEstacionamiento());
+		
+		
+		
+		
+
+		
+		
+		
+		
+	}
+	
+	
 
 }
 
